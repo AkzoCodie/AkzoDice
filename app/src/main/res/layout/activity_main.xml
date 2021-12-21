@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/FirstDice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/SecondDice"
+        android:layout_marginEnd="0dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/DiceRollFour"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/aa" />
+
+        <ImageView
+            android:id="@+id/DiceRollSix"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/aaa" />
+
+        <ImageView
+            android:id="@+id/DiceRollEight"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/aaaa" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/FirstText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FirstDice"
+        android:layout_alignEnd="@+id/FirstDice"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="10dp"
+            android:text="d4" />
+
+        <TextView
+            android:id="@+id/dSix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="10dp"
+            android:text="d6" />
+
+        <TextView
+            android:id="@+id/dEight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="10dp"
+            android:text="d8" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/SecondDice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FirstText"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/DiceRollTen"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/aaaaa" />
+
+
+        <ImageView
+            android:id="@+id/DiceRollTwelve"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/aaaaaa" />
+
+
+        <ImageView
+            android:id="@+id/DiceRollTwenty"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/aaaaaaa" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/SecondText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SecondDice"
+        android:layout_alignEnd="@+id/SecondDice"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dTen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="10dp"
+            android:text="d10" />
+
+        <TextView
+            android:id="@+id/dTwelve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="10dp"
+            android:text="d12" />
+
+        <TextView
+            android:id="@+id/dTwenty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="10dp"
+            android:text="d20" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ButtonsForDiceNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="15dp">
+
+        <Button
+            android:id="@+id/dminus"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/dDiceNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="30dp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/ddiceSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="d"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/dplus"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ButtonsForExtraNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="15dp">
+
+        <Button
+            android:id="@+id/minus"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/DiceNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="30dp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/diceSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="30dp"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/plus"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</RelativeLayout>

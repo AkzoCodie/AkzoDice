@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         dDiceNumberInt = 1;
+        diceSymbolInt = 0;
 
         imageViewToFour = findViewById(R.id.DiceRollFour);
         imageViewToSix = findViewById(R.id.DiceRollSix);
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         dminus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Integer.parseInt(String.valueOf(dDiceNumber)) != 1) {
+                if (Integer.parseInt(String.valueOf(dDiceNumberInt)) != 1) {
                     dDiceNumberInt--;
                     dDiceNumber.setText(String.valueOf(dDiceNumberInt));
                 }
@@ -52,6 +53,22 @@ public class MainActivity extends AppCompatActivity {
                 dDiceNumber.setText(String.valueOf(dDiceNumberInt));
             }
         });
+        minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (Integer.parseInt(String.valueOf(diceSymbolInt)) != 0) {
+                    diceSymbolInt--;
+                    diceSymbol.setText(String.valueOf(diceSymbolInt));
+                }
+            }
+        });
+        plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                diceSymbolInt++;
+                diceSymbol.setText(String.valueOf(diceSymbolInt));
+            }
+        });
 
 
 
@@ -61,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, RollDice.class);
                 intent.putExtra("diceFour", R.drawable.aa);
                 intent.putExtra("diceRollExtra", dDiceNumber.getText());
+                intent.putExtra("diceNumberExtra", diceSymbol.getText());
                 startActivity(intent);
             }
         });
@@ -70,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, RollDice.class);
                 intent.putExtra("diceSix", R.drawable.aaa);
+                intent.putExtra("diceRollExtra", dDiceNumber.getText());
+                intent.putExtra("diceNumberExtra", diceSymbol.getText());
                 startActivity(intent);
             }
         });
@@ -79,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, RollDice.class);
                 intent.putExtra("diceEight", R.drawable.aaaa);
+                intent.putExtra("diceRollExtra", dDiceNumber.getText());
+                intent.putExtra("diceNumberExtra", diceSymbol.getText());
                 startActivity(intent);
             }
         });
@@ -88,6 +110,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, RollDice.class);
                 intent.putExtra("diceTen", R.drawable.aaaaa);
+                intent.putExtra("diceRollExtra", dDiceNumber.getText());
+                intent.putExtra("diceNumberExtra", diceSymbol.getText());
                 startActivity(intent);
             }
         });
@@ -97,6 +121,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, RollDice.class);
                 intent.putExtra("diceTwelve", R.drawable.aaaaaa);
+                intent.putExtra("diceRollExtra", dDiceNumber.getText());
+                intent.putExtra("diceNumberExtra", diceSymbol.getText());
                 startActivity(intent);
             }
         });
@@ -106,6 +132,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, RollDice.class);
                 intent.putExtra("diceTwenty", R.drawable.aaaaaaa);
+                intent.putExtra("diceRollExtra", dDiceNumber.getText());
+                intent.putExtra("diceNumberExtra", diceSymbol.getText());
                 startActivity(intent);
             }
         });

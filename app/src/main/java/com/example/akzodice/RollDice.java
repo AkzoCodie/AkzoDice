@@ -115,13 +115,16 @@ public class RollDice extends AppCompatActivity {
     }
 
     public void DiceAnimationFour(){
-        score =0;
+        score = 0;
         imageViewFour.setBackgroundResource(R.drawable.animationdicefour);
         diceAnimationFour = (AnimationDrawable) imageViewFour.getBackground();
         diceAnimationFour.start();
         Intent intent = getIntent();
         diceExtraRollString = intent.getExtras().getString("diceRollExtra");
         diceExtraRoll.setText(diceExtraRollString);
+        diceExtraNumberString = intent.getExtras().getString("diceNumberExtra");
+        diceExtraNumber.setText(diceExtraNumberString);
+        int extraNumber = Integer.parseInt(diceExtraNumberString);
 
         timer = new Timer();
         timer.schedule(new TimerTask() {
@@ -141,17 +144,23 @@ public class RollDice extends AppCompatActivity {
                     number = random.nextInt(4) + 1;
                     score = score+number;
                 }
-                textView.setText(String.valueOf(score));
+                textView.setText(String.valueOf(score+extraNumber));
                 textView.setVisibility(View.VISIBLE);
             }
         }, 2800);
     }
 
     public void DiceAnimationSix(){
+        score = 0;
         imageViewSix.setBackgroundResource(R.drawable.animationdicesix);
         diceAnimationSix = (AnimationDrawable) imageViewSix.getBackground();
-
         diceAnimationSix.start();
+        Intent intent = getIntent();
+        diceExtraRollString = intent.getExtras().getString("diceRollExtra");
+        diceExtraRoll.setText(diceExtraRollString);
+        diceExtraNumberString = intent.getExtras().getString("diceNumberExtra");
+        diceExtraNumber.setText(diceExtraNumberString);
+        int extraNumber = Integer.parseInt(diceExtraNumberString);
 
         timer = new Timer();
         timer.schedule(new TimerTask() {
@@ -159,25 +168,34 @@ public class RollDice extends AppCompatActivity {
             public void run() {
                 diceAnimationSix.stop();
                 imageViewSix.setBackgroundResource(R.drawable.aaa);
-
             }
         }, 2800);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 Random random = new Random();
-                int number = random.nextInt(6) + 1;
-                textView.setText(String.valueOf(number));
+                for (int i=0; i<Integer.parseInt(diceExtraRollString); i++)
+                {
+                    number = random.nextInt(6)+1;
+                    score = score+number;
+                }
+                textView.setText(String.valueOf(score+extraNumber));
                 textView.setVisibility(View.VISIBLE);
             }
         }, 2800);
     }
 
     public void DiceAnimationEight(){
+        score = 0;
         imageViewEight.setBackgroundResource(R.drawable.animationdiceeight);
         diceAnimationEight = (AnimationDrawable) imageViewEight.getBackground();
-
         diceAnimationEight.start();
+        Intent intent = getIntent();
+        diceExtraRollString = intent.getExtras().getString("diceRollExtra");
+        diceExtraRoll.setText(diceExtraRollString);
+        diceExtraNumberString = intent.getExtras().getString("diceNumberExtra");
+        diceExtraNumber.setText(diceExtraNumberString);
+        int extraNumber = Integer.parseInt(diceExtraNumberString);
 
         timer = new Timer();
         timer.schedule(new TimerTask() {
@@ -192,18 +210,28 @@ public class RollDice extends AppCompatActivity {
             @Override
             public void run() {
                 Random random = new Random();
-                int number = random.nextInt(8) + 1;
-                textView.setText(String.valueOf(number));
+                for (int i=0; i<Integer.parseInt(diceExtraRollString); i++)
+                {
+                    number = random.nextInt(8)+1;
+                    score = score+number;
+                }
+                textView.setText(String.valueOf(score+extraNumber));
                 textView.setVisibility(View.VISIBLE);
             }
         }, 2800);
     }
 
     public void DiceAnimationTen(){
+        score = 0;
         imageViewTen.setBackgroundResource(R.drawable.animationdiceten);
         diceAnimationTen = (AnimationDrawable) imageViewTen.getBackground();
-
         diceAnimationTen.start();
+        Intent intent = getIntent();
+        diceExtraRollString = intent.getExtras().getString("diceRollExtra");
+        diceExtraRoll.setText(diceExtraRollString);
+        diceExtraNumberString = intent.getExtras().getString("diceNumberExtra");
+        diceExtraNumber.setText(diceExtraNumberString);
+        int extraNumber = Integer.parseInt(diceExtraNumberString);
 
         timer = new Timer();
         timer.schedule(new TimerTask() {
@@ -218,18 +246,28 @@ public class RollDice extends AppCompatActivity {
             @Override
             public void run() {
                 Random random = new Random();
-                int number = random.nextInt(10) + 1;
-                textView.setText(String.valueOf(number));
+                for (int i=0; i<Integer.parseInt(diceExtraRollString); i++)
+                {
+                    number = random.nextInt(10)+1;
+                    score = score+number;
+                }
+                textView.setText(String.valueOf(score+extraNumber));
                 textView.setVisibility(View.VISIBLE);
             }
         }, 2800);
     }
 
     public void DiceAnimationTwelve(){
+        score = 0;
         imageViewTwelve.setBackgroundResource(R.drawable.animationdicetwelve);
         diceAnimationTwelve = (AnimationDrawable) imageViewTwelve.getBackground();
-
         diceAnimationTwelve.start();
+        Intent intent = getIntent();
+        diceExtraRollString = intent.getExtras().getString("diceRollExtra");
+        diceExtraRoll.setText(diceExtraRollString);
+        diceExtraNumberString = intent.getExtras().getString("diceNumberExtra");
+        diceExtraNumber.setText(diceExtraNumberString);
+        int extraNumber = Integer.parseInt(diceExtraNumberString);
 
         timer = new Timer();
         timer.schedule(new TimerTask() {
@@ -244,18 +282,28 @@ public class RollDice extends AppCompatActivity {
             @Override
             public void run() {
                 Random random = new Random();
-                int number = random.nextInt(12) + 1;
-                textView.setText(String.valueOf(number));
+                for (int i=0; i<Integer.parseInt(diceExtraRollString); i++)
+                {
+                    number = random.nextInt(12)+1;
+                    score = score+number;
+                }
+                textView.setText(String.valueOf(score+extraNumber));
                 textView.setVisibility(View.VISIBLE);
             }
         }, 2800);
     }
 
     public void DiceAnimationTwenty(){
+        score = 0;
         imageViewTwenty.setBackgroundResource(R.drawable.animationdicetwenty);
         diceAnimationTwenty = (AnimationDrawable) imageViewTwenty.getBackground();
-
         diceAnimationTwenty.start();
+        Intent intent = getIntent();
+        diceExtraRollString = intent.getExtras().getString("diceRollExtra");
+        diceExtraRoll.setText(diceExtraRollString);
+        diceExtraNumberString = intent.getExtras().getString("diceNumberExtra");
+        diceExtraNumber.setText(diceExtraNumberString);
+        int extraNumber = Integer.parseInt(diceExtraNumberString);
 
         timer = new Timer();
         timer.schedule(new TimerTask() {
@@ -270,8 +318,12 @@ public class RollDice extends AppCompatActivity {
             @Override
             public void run() {
                 Random random = new Random();
-                int number = random.nextInt(20) + 1;
-                textView.setText(String.valueOf(number));
+                for (int i=0; i<Integer.parseInt(diceExtraRollString); i++)
+                {
+                    number = random.nextInt(20)+1;
+                    score = score+number;
+                }
+                textView.setText(String.valueOf(score+extraNumber));
                 textView.setVisibility(View.VISIBLE);
             }
         }, 2800);
